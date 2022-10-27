@@ -1,0 +1,105 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    .dot {
+      width: 7px;
+      height: 7px;
+      display: inline-block;
+      border-radius: 50%;
+    }
+    .title {
+      text-transform: uppercase;
+      font-size: 1rem;
+      letter-spacing: -0.5px;
+    }
+    .tasksNo {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+
+      .no {
+        font-weight: bolder;
+      }
+    }
+  }
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  hr {
+    height: 1px;
+    opacity: 0.4;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    .header {
+      margin-bottom: 1rem;
+    }
+    .cardContainer {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      .card {
+        flex: 1;
+      }
+    }
+  }
+}
+
+// .proposedContainer {
+//   flex: 1;
+//   display: flex;
+//   flex-direction: column;
+
+//   .header {
+//   }
+
+// }
+
+// @media screen and (max-width: 768px) {
+//   .proposedContainer {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+
+//     .header {
+//       display: flex;
+//       align-items: center;
+//       gap: 10px;
+//       margin-bottom: 1.5rem;
+//       .dot {
+//         width: 7px;
+//         height: 7px;
+//         display: inline-block;
+//         border-radius: 50%;
+//       }
+//       .title {
+//         text-transform: uppercase;
+//         font-size: 1rem;
+//         letter-spacing: -0.5px;
+//       }
+//     }
+//   }
+//   .cardContainer {
+//     display: none;
+//   }
+
+//   .hr {
+//     visibility: visible;
+//     opacity: 1;
+//   }
+// }

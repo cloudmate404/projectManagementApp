@@ -1,0 +1,235 @@
+.sidebar {
+  max-width: 140px;
+  height: 100vh;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  position: sticky;
+
+  .top {
+    height: 50px;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    padding: 4rem 0;
+    cursor: pointer;
+    .logo {
+      font-size: 32px;
+      color: #000000;
+      font-family: "Eagle Lake", cursive;
+      span {
+        color: #341eff;
+        font-family: "Eagle Lake", cursive;
+      }
+    }
+  }
+  .mid {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    width: 100%;
+    // position: relative;
+
+    // gap: 0.5rem;
+  }
+  .navBtn {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .sidebarIcon {
+    display: grid;
+    place-content: center;
+
+    font-size: 24px;
+    width: 100%;
+    height: 68px;
+
+    color: rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease-out;
+    cursor: pointer;
+    &:hover {
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+  .bottom {
+    margin-bottom: 50%;
+    .profileImg {
+      max-height: 40px;
+      max-width: 40px;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    .top {
+      .logo {
+        font-size: 2rem;
+      }
+    }
+    .mid {
+    }
+    .sidebarIcon {
+      font-size: 20px;
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    flex-direction: row;
+    max-width: 100vw;
+    max-height: 60px;
+
+    margin-top: 50px;
+
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+    .navBtn {
+      visibility: visible;
+      opacity: 1;
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+    }
+
+    .top {
+      padding: 1rem;
+      width: 60px;
+    }
+    .mid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 30;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: #fff;
+      transition: 1s;
+      transform: translateY(-100vh);
+      .navClose {
+        top: 10%;
+        right: 5%;
+      }
+    }
+    .bottom {
+      margin-bottom: 0;
+      display: flex;
+      gap: 1.5rem;
+    }
+    // .navOpen {
+    //   visibility: visible;
+    //   opacity: 1;
+    // }
+    .responsive_nav {
+      transform: none;
+    }
+
+    .displayNone {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+// .sidebar {
+//   width: 140px;
+//   max-height: 100vh;
+//   flex: 1;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 0.275rem;
+
+//   position: sticky;
+
+//   .top {
+//     height: 50px;
+//     display: grid;
+//     place-content: center;
+//     width: 100%;
+//     padding: 32px 0;
+//     cursor: pointer;
+//     .logo {
+//       font-size: 32px;
+//       color: #000000;
+//       font-family: "Eagle Lake", cursive;
+//       span {
+//         color: #341eff;
+//         font-family: "Eagle Lake", cursive;
+//       }
+//     }
+//   }
+
+//   .bottom {
+//     .profileImg {
+//       max-height: 40px;
+//       max-width: 40px;
+//       border-radius: 50%;
+//       border: 1px solid #ccc;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   .sidebar {
+//     flex-direction: row;
+//     // width: 100%;
+//     justify-content: space-between;
+//     position: relative;
+//     padding: 1rem 4rem;
+//     border: 1px solid #000;
+
+//     .top {
+//       justify-self: center;
+//       width: auto;
+//       padding: 0;
+//     }
+
+//     .mid {
+//       position: fixed;
+//       top: 0;
+//       left: 0;
+//       height: 100%;
+//       width: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       justify-content: center;
+//       gap: 1.5rem;
+//       background-color: var(--mainColor);
+//       transition: 1s;
+//       // transform: translateY(-100vh);
+//       background-color: #000;
+//     }
+
+//     .bottom {
+//       margin-left: auto;
+//     }
+
+//     .navOpen {
+//       position: absolute;
+//     }
+//   }
+// }

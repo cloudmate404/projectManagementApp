@@ -1,0 +1,86 @@
+.dashHeader {
+  //   display: grid;
+  //   grid-template-columns: repeat(4, 1fr);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  //   background-color: aqua;
+  align-items: center;
+  gap: 6rem;
+
+  .left {
+    .title {
+      font-family: "Eagle Lake", cursive;
+    }
+  }
+  .mid {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-left: auto;
+
+    .search {
+      display: flex;
+      align-items: center;
+      border: none;
+      border-bottom: 0.5px solid lightgray;
+      border-radius: 5px;
+      padding: 3px;
+      .searchInput {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        width: 300px;
+
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .right {
+    justify-self: flex-end;
+    .newProject,
+    .newProjectBtn {
+      font-size: 16px;
+      padding: 16px 32px;
+      background-color: #341eff;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+    }
+    .newProject {
+      padding: 0.75rem 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: 1.4rem;
+  }
+  .searchInput {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .dashHeader {
+    .newProject {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 2;
+      font-size: 40px;
+    }
+    .profileImg {
+      max-height: 40px;
+      max-width: 40px;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      margin-right: 4rem;
+    }
+  }
+}

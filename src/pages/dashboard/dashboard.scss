@@ -1,0 +1,75 @@
+.dashboard {
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+
+  .dashboardContainer {
+    flex: 10;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    .stages {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .stages {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .dashboard {
+    flex-direction: column;
+    gap: 1rem;
+    .dashboardContainer {
+      margin-top: 0rem;
+    }
+  }
+}
+// .dashboard {
+//   width: 100%;
+//   display: flex;
+
+//   flex-direction: row;
+//   gap: 4rem;
+//   flex: 10;
+//   overflow-x: none;
+//   padding: 64px;
+//   width: 100%;
+//   .stages {
+//     display: flex;
+//     gap: 2rem;
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   .dashboard {
+//     width: 100%;
+//     // margin: 0 2rem;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 0 2rem;
+
+//     .dashboardContainer {
+//       flex: 1;
+//       padding: 64px;
+//       width: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 4rem;
+//       .stages {
+//         flex-direction: column;
+//         gap: 3rem;
+//       }
+//     }
+//   }
+// }
